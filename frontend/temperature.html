@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
+  <body>
+    <div class="topnav">
+          <a href="index.html" class="active">Sääasema</a>
+          <div id="myLinks">
+            <a href="lastvalues.html">Viimeiset arvot</a>
+            <a href="temperature.html">Lämpötila</a>
+            <a href="rain.html">Sademäärä</a>
+          </div>
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+          </a> 
+    </div>
+    <div class="content">
+      <h1>Lämpötila</h1>
+      <p>Viimeiset 20 arvoa</p>
+    </div>
+    <ul>
+      <li>Mean: <span id="tempmean"></span></li>
+      <li>Median: <span id="tempmedian"></span></li>
+      <li>Mode: <span id="tempmode"></span></li>
+      <li>Range: <span id="temprange"></span></li>
+      <li>Standard Deviation: <span id="tempstdDev"></span></li>
+    </ul>
+    <div class="chart-container">
+      <canvas id="myChart"></canvas>
+    </div>
+    
+    <table>
+      <thead>
+        <tr>
+          <th>Päivämäärä</th>
+          <th>Kellonaika</th>
+          <th>Arvo</th>
+        </tr>
+      </thead>
+      <tbody id="data">
+      </tbody>
+    </table>
+  
+  <footer>
+    <p>© 2023 Helmiriitta Vikman</p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.2.1/dist/chart.umd.min.js"></script>
+  <script src="statistics.js"></script>
+  <script src="temperature.js" defer></script>
+  </body>
+  </html>
